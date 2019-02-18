@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		8F2E41DE22159D7900186715 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E41DD22159D7900186715 /* AppDelegate.swift */; };
-		8F2E41E022159D7900186715 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E41DF22159D7900186715 /* ViewController.swift */; };
+		8F2E41E022159D7900186715 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E41DF22159D7900186715 /* ShoppingViewController.swift */; };
 		8F2E41E322159D7900186715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2E41E122159D7900186715 /* Main.storyboard */; };
 		8F2E41E522159D7B00186715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2E41E422159D7B00186715 /* Assets.xcassets */; };
 		8F2E41E822159D7B00186715 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2E41E622159D7B00186715 /* LaunchScreen.storyboard */; };
 		8F2E41F322159D7B00186715 /* ConvertMoney_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E41F222159D7B00186715 /* ConvertMoney_appTests.swift */; };
 		8F2E41FE22159D7B00186715 /* ConvertMoney_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E41FD22159D7B00186715 /* ConvertMoney_appUITests.swift */; };
+		8F2E420D2215A48700186715 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E420C2215A48700186715 /* SettingsViewController.swift */; };
+		8F2E420F2215A49C00186715 /* TaxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E420E2215A49C00186715 /* TaxesViewController.swift */; };
+		8F9BB3032216D01C007BF2FC /* TaxesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9BB3022216D01C007BF2FC /* TaxesCalculator.swift */; };
+		8F9BB3062216D38F007BF2FC /* UIViewControllerExtensionTaxesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9BB3052216D38F007BF2FC /* UIViewControllerExtensionTaxesCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		8F2E41DA22159D7900186715 /* ConvertMoney-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ConvertMoney-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2E41DD22159D7900186715 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F2E41DF22159D7900186715 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F2E41DF22159D7900186715 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
 		8F2E41E222159D7900186715 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F2E41E422159D7B00186715 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F2E41E722159D7B00186715 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		8F2E41F922159D7B00186715 /* ConvertMoney-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConvertMoney-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2E41FD22159D7B00186715 /* ConvertMoney_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertMoney_appUITests.swift; sourceTree = "<group>"; };
 		8F2E41FF22159D7B00186715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F2E420C2215A48700186715 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8F2E420E2215A49C00186715 /* TaxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesViewController.swift; sourceTree = "<group>"; };
+		8F9BB3022216D01C007BF2FC /* TaxesCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesCalculator.swift; sourceTree = "<group>"; };
+		8F9BB3052216D38F007BF2FC /* UIViewControllerExtensionTaxesCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTaxesCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,10 @@
 		8F2E41DC22159D7900186715 /* ConvertMoney-app */ = {
 			isa = PBXGroup;
 			children = (
+				8F9BB3042216D36A007BF2FC /* Extension */,
+				8F9BB3012216CFB7007BF2FC /* Model */,
+				8F2E420B2215A45700186715 /* Controllers */,
 				8F2E41DD22159D7900186715 /* AppDelegate.swift */,
-				8F2E41DF22159D7900186715 /* ViewController.swift */,
 				8F2E41E122159D7900186715 /* Main.storyboard */,
 				8F2E41E422159D7B00186715 /* Assets.xcassets */,
 				8F2E41E622159D7B00186715 /* LaunchScreen.storyboard */,
@@ -123,6 +133,32 @@
 				8F2E41FF22159D7B00186715 /* Info.plist */,
 			);
 			path = "ConvertMoney-appUITests";
+			sourceTree = "<group>";
+		};
+		8F2E420B2215A45700186715 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8F2E41DF22159D7900186715 /* ShoppingViewController.swift */,
+				8F2E420C2215A48700186715 /* SettingsViewController.swift */,
+				8F2E420E2215A49C00186715 /* TaxesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8F9BB3012216CFB7007BF2FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F9BB3022216D01C007BF2FC /* TaxesCalculator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F9BB3042216D36A007BF2FC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8F9BB3052216D38F007BF2FC /* UIViewControllerExtensionTaxesCalculator.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F2E41E022159D7900186715 /* ViewController.swift in Sources */,
+				8F2E420F2215A49C00186715 /* TaxesViewController.swift in Sources */,
+				8F2E41E022159D7900186715 /* ShoppingViewController.swift in Sources */,
+				8F9BB3032216D01C007BF2FC /* TaxesCalculator.swift in Sources */,
 				8F2E41DE22159D7900186715 /* AppDelegate.swift in Sources */,
+				8F9BB3062216D38F007BF2FC /* UIViewControllerExtensionTaxesCalculator.swift in Sources */,
+				8F2E420D2215A48700186715 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5M5LCWXKUF;
+				DEVELOPMENT_TEAM = KS6G5WGUSD;
 				INFOPLIST_FILE = "ConvertMoney-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,7 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5M5LCWXKUF;
+				DEVELOPMENT_TEAM = KS6G5WGUSD;
 				INFOPLIST_FILE = "ConvertMoney-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
