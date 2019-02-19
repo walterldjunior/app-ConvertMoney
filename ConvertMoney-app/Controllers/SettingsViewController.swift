@@ -16,8 +16,11 @@ class SettingsViewController: UIViewController {
 	@IBOutlet weak var stateTaxTxt: UITextField!
 	@IBOutlet weak var declarationStatus: UILabel!
 	@IBOutlet weak var pickerView: UIPickerView!
+	@IBOutlet weak var currentDollarQuotation: UILabel!
 	
+	//MARK:- Variables
 	private let dataSource = ["Declarado", "Não Declarado", "Multado"]
+	var dolarQuotation: CurrencyModel?
 	
 	//MARK:- View Manipulation
     override func viewDidLoad() {
@@ -25,7 +28,6 @@ class SettingsViewController: UIViewController {
 		
 		pickerView.dataSource = self
 		pickerView.delegate = self
-
 		initialDataScreen()
     }
 	
@@ -35,6 +37,7 @@ class SettingsViewController: UIViewController {
 	
 	//MARK:- Functions
 	func initialDataScreen() {
+		getCurrentCurrencyQuote()
 		dolarTxt.text = tc.getFormatterValue(of: tc.dolar, withCurrency: "")
 		iofTxt.text = tc.getFormatterValue(of: tc.iof, withCurrency: "")
 		stateTaxTxt.text = tc.getFormatterValue(of: tc.stateTax, withCurrency: "")
@@ -44,6 +47,31 @@ class SettingsViewController: UIViewController {
 		tc.dolar = tc.convertToDouble(dolarTxt.text!)
 		tc.iof = tc.convertToDouble(iofTxt.text!)
 		tc.stateTax = tc.convertToDouble(stateTaxTxt.text!)
+	}
+	
+	func getCurrentCurrencyQuote() {
+		REST.getCurrency(onComplete: { (currencyModel) in
+			self.dolarQuotation = currencyModel[0]
+			self.currentQuotation()
+		}) { (CurrencyError) in
+			switch CurrencyError {
+			case .url:
+				print("Erro ao recuperar a URL")
+			case .taskError( _):
+				print("Erro na execução da task")
+			case .noResponse:
+				print("Erro no Response")
+			case .responseStatusCode( _):
+				print("Erro no Status Code / Diferente de 200")
+			}
+		}
+	}
+	
+	func currentQuotation() {
+		DispatchQueue.main.async(execute: {
+			guard let quotationDollar = self.dolarQuotation?.bid else {return}
+			self.currentDollarQuotation.text = "Cotação atual do Dólar para compra: R$ \(String(describing: quotationDollar))"
+		})
 	}
 }
 

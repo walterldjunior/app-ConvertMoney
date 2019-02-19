@@ -18,6 +18,8 @@
 		8F2E420F2215A49C00186715 /* TaxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E420E2215A49C00186715 /* TaxesViewController.swift */; };
 		8F9BB3032216D01C007BF2FC /* TaxesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9BB3022216D01C007BF2FC /* TaxesCalculator.swift */; };
 		8F9BB3062216D38F007BF2FC /* UIViewControllerExtensionTaxesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9BB3052216D38F007BF2FC /* UIViewControllerExtensionTaxesCalculator.swift */; };
+		8FB08E90221C22E90090FD88 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB08E8F221C22E90090FD88 /* REST.swift */; };
+		8FB08E92221C23FD0090FD88 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB08E91221C23FD0090FD88 /* CurrencyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		8F2E420E2215A49C00186715 /* TaxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesViewController.swift; sourceTree = "<group>"; };
 		8F9BB3022216D01C007BF2FC /* TaxesCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesCalculator.swift; sourceTree = "<group>"; };
 		8F9BB3052216D38F007BF2FC /* UIViewControllerExtensionTaxesCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTaxesCalculator.swift; sourceTree = "<group>"; };
+		8FB08E8F221C22E90090FD88 /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
+		8FB08E91221C23FD0090FD88 /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +109,12 @@
 		8F2E41DC22159D7900186715 /* ConvertMoney-app */ = {
 			isa = PBXGroup;
 			children = (
+				8FB08E8E221C22D40090FD88 /* API */,
 				8F9BB3042216D36A007BF2FC /* Extension */,
 				8F9BB3012216CFB7007BF2FC /* Model */,
 				8F2E420B2215A45700186715 /* Controllers */,
+				8FB08E8D221C22810090FD88 /* View */,
 				8F2E41DD22159D7900186715 /* AppDelegate.swift */,
-				8F2E41E122159D7900186715 /* Main.storyboard */,
 				8F2E41E422159D7B00186715 /* Assets.xcassets */,
 				8F2E41E622159D7B00186715 /* LaunchScreen.storyboard */,
 				8F2E41E922159D7B00186715 /* Info.plist */,
@@ -149,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				8F9BB3022216D01C007BF2FC /* TaxesCalculator.swift */,
+				8FB08E91221C23FD0090FD88 /* CurrencyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,6 +165,22 @@
 				8F9BB3052216D38F007BF2FC /* UIViewControllerExtensionTaxesCalculator.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8FB08E8D221C22810090FD88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F2E41E122159D7900186715 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8FB08E8E221C22D40090FD88 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8FB08E8F221C22E90090FD88 /* REST.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,10 +316,12 @@
 			files = (
 				8F2E420F2215A49C00186715 /* TaxesViewController.swift in Sources */,
 				8F2E41E022159D7900186715 /* ShoppingViewController.swift in Sources */,
+				8FB08E92221C23FD0090FD88 /* CurrencyModel.swift in Sources */,
 				8F9BB3032216D01C007BF2FC /* TaxesCalculator.swift in Sources */,
 				8F2E41DE22159D7900186715 /* AppDelegate.swift in Sources */,
 				8F9BB3062216D38F007BF2FC /* UIViewControllerExtensionTaxesCalculator.swift in Sources */,
 				8F2E420D2215A48700186715 /* SettingsViewController.swift in Sources */,
+				8FB08E90221C22E90090FD88 /* REST.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
